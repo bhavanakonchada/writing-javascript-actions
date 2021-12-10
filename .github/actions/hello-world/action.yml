@@ -1,0 +1,22 @@
+name: "my hello action"
+
+description: "Say hello to GitHub Actions"
+
+inputs:
+  first-greeting:
+    description: "Name for first greeting"
+    required: true
+    default: "Anvi"
+    
+  second-greeting:
+    description: "Name for second greeting"
+    required: false
+    default: "Anvi"
+    
+  third-greeting:
+    description: "Name for third greeting"
+    required: false
+
+runs:
+  using: "node12"
+  main: "main.js"
