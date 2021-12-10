@@ -13,7 +13,7 @@ inputs:
     required: false
     default: "Anvi"
     
-  first-greeting:
+  third-greeting:
     description: "Name for third greeting"
     required: false
 
