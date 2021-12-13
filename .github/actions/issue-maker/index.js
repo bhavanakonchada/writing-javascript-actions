@@ -8,7 +8,7 @@ async function run() {
     const token = core.getInput("repo-token");
 
     const octokit = github.getOctokit(token);
-
+    console.log("Creating Issue ..");
     const newIssue = await octokit.issues.create({
         repo: github.context.repo.repo,
         owner: github.context.repo.owner,
@@ -16,6 +16,7 @@ async function run() {
         body: jokeBody
     });
   } catch (err) {
+      console.log("Failed creating issue");
       core.setFailed(err.message);
   }
 }
